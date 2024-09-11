@@ -164,3 +164,19 @@ input[type="checkbox"] {
 #green {
     background-color: #D1EDD3;
 }
+
+@media screen and (max-width: 1111px) {
+    .todo-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+}
+
+@media screen and (max-width: 735px) {
+    .todo_item, .todo_pattern {
+        width: 15rem;
+        height: 15rem;
+    }
+}
