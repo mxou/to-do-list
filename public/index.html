@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List avec Vue.js</title>
+    <link rel="stylesheet" href="./../src/styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>A faire liste</h1>
+      </header>
+      <div class="todo-grid">
+        <div v-for="todo in todos" :key="todo.id" class="todo-item" :style="{ backgroundColor: todo.color || '#FDF2B3' }">
+          <div class="span_container">
+            <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="title"> {{ todo.title }} </span>
+            <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="desc"> {{ todo.desc }} </span>
+          </div>
+          <div class="button_container">
+            <input type="checkbox" v-model="todo.completed" />
+            <div class="color_container">
+              <select v-model="todo.color" name="" id="" @change="saveTodos">
+                <option value="#FFDADA">Rose</option>
+                <option value="#D1EAED">Bleu</option>
+                <option value="#FDF2B3">Jaune</option>
+                <option value="#D1EDD3">Vert</option>
+              </select>
+            </div>
+            <button @click="removeTodo(todo.id)" class="delete_button">
+              <img src="./../src/img/trash_white.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <form @submit.prevent="addTodo" class="todo_pattern">
+          <div class="inputs_form_container">
+            <input v-model="newTodoTitle" placeholder="Ajoutez une nouvelle tâche" type="text" />
+            <input v-model="newTodoDesc" placeholder="Ajoutez y une description" type="text" />
+          </div>
+          <button type="submit" class="add_button"><img src="./../src/img/check.svg" alt="" /></button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./../src/main.js"></script>
+  </body>
+</html>

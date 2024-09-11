@@ -1,0 +1,166 @@
+:root {
+    --graye: #292D30;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f5f5f5;
+}
+
+
+#app {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.inputs_form_container, .span_container {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+}
+
+
+form {   
+    margin-bottom: 20px;    
+}
+
+input[type="text"] {
+    /* flex: 1; */
+    padding: 9px;
+    border: none;
+    background: #ffeaea;
+    width: 90%;
+}
+
+input::placeholder {
+    color: var(--graye);
+    font-size: 1.1rem;
+    font-weight: 800;
+    opacity: 1;
+    /* Firefox */
+}
+
+
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.todo_pattern {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFDADA;
+    border-radius: 7px;
+}
+
+.inputs_edit_container {
+    border: 2px solid pink;
+}
+
+
+.todo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    place-items: center;
+}
+
+.span_container {
+    /* border: 2px solid red; */
+}
+
+.title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.desc {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+.todo-item {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFDADA;
+    border-radius: 7px;
+}
+
+.todo-item span {
+    flex: 1;
+}
+
+.delete_button {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border: none;
+}
+
+.add_button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+#pink {
+    background-color: #FFDADA;
+}
+
+#blue {
+    background-color: #D1EAED;
+}
+
+#yellow {
+    background-color: #FDF2B3;
+}
+
+#green {
+    background-color: #D1EDD3;
+}
